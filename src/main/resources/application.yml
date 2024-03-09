@@ -1,0 +1,12 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true  
+  datasource:
+    url: jdbc:mysql://localhost:3306/nutritions_digital_assistant
+    username: root
+    password: 3151485
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  liquibase:
+    contexts: test 
