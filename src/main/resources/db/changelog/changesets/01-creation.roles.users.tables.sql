@@ -8,7 +8,7 @@ CREATE TABLE users (
   email VARCHAR(100) NOT NULL,
   password VARCHAR(45) NOT NULL,
   gender VARCHAR(45) NULL COMMENT '1 = men\n2 = woman\n3 = no binary',
-  adress VARCHAR(250) NULL,
+  address VARCHAR(250) NULL,
   role INT NULL COMMENT '1 = User\n2 = Admin',
   date DATE NULL,
   PRIMARY KEY (`id`));
@@ -19,5 +19,4 @@ CREATE TABLE roles (
   PRIMARY KEY (`id`));
   
 INSERT INTO roles (id, name) VALUES (1, 'Usuario');
-INSERT INTO roles (id, name) VALUES (2, 'Administrador');  
-  
+INSERT INTO roles (id, name) VALUES (2, 'Administrador');
