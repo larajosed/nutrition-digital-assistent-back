@@ -1,12 +1,15 @@
 package com.nutriotions.digitalassitant.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-
+@Entity
 @Table(name = "users")
 public class Users {
 	
@@ -15,10 +18,10 @@ public class Users {
 	private Integer id;
 	
 	@Column
-	private String nombre;
+	private String name;
 	
-	@Column
-	private String last_name;
+	@Column(name = "last_name")
+	private String lastName;
 	
 	 @Column
 	 private String email;
@@ -30,13 +33,14 @@ public class Users {
 	 private String gender;
 	 
 	 @Column
-	 private String adress;
-	 
-	 @Column
-	 private Integer role;
-	 
+	 private String address;
+
 	 @Column 
-	 private Date date;
+	 private LocalDate date;
+	 
+	 @ManyToOne
+	 @JoinColumn(name = "role", insertable = false, updatable = false)
+	 private Roles role;
 
 	public Integer getId() {
 		return id;
@@ -46,20 +50,20 @@ public class Users {
 		this.id = id;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getName() {
+		return name;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getLast_name() {
-		return last_name;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
+	public void setLast_name(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getEmail() {
@@ -87,26 +91,18 @@ public class Users {
 	}
 
 	public String getAdress() {
-		return adress;
+		return address;
 	}
 
 	public void setAdress(String adress) {
-		this.adress = adress;
+		this.address = adress;
 	}
 
-	public Integer getRole() {
-		return role;
+	public LocalDate getDate() {
+		return this.date;
 	}
 
-	public void setRole(Integer role) {
-		this.role = role;
-	}
-
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 	
