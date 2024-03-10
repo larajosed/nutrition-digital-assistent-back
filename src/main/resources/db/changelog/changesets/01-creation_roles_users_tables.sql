@@ -7,7 +7,7 @@ CREATE TABLE users (
   last_name VARCHAR(100) NOT NULL,
   email VARCHAR(100) NOT NULL,
   password VARCHAR(45) NOT NULL,
-  gender VARCHAR(45) NULL COMMENT '1 = men\n2 = woman\n3 = no binary',
+  gender INT NULL COMMENT '1 = Men\n2 = Woman\n3 = No binary',
   address VARCHAR(250) NULL,
   role INT NULL COMMENT '1 = User\n2 = Admin',
   date DATE NULL,

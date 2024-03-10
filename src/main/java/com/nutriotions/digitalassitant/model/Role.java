@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table (name = "roles")
-public class Roles {
+public class Role {
 
 	@Id
 	@Column(name = "id")
@@ -19,21 +19,22 @@ public class Roles {
 	@Column
 	private String name;
 
-	public Integer getRoleId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setRoleId(Integer id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
-	public String getRoleName() {
+	public String getName() {
 		return name;
 	}
 
-	public void setRoleName(String nombre) {
-		this.name = nombre;
+	public void setName(String name) {
+		this.name = name;
 	}
+
 	
 	
 }

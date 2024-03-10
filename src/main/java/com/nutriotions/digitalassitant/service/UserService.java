@@ -6,7 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.nutriotions.digitalassitant.model.Users;
+import com.nutriotions.digitalassitant.model.User;
 import com.nutriotions.digitalassitant.repository.UserRepository;
 
 
@@ -17,8 +17,8 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepository;
 	
-	public Users findByEmail(String email, String password) {
-		Users usuario = userRepository.findByEmail(email).orElse(null);
+	public User findByEmail(String email, String password) {
+		User usuario = userRepository.findByEmail(email).orElse(null);
 		if(usuario != null && password.equals(usuario.getPassword())) {
 			 return usuario;
 		 } else {
@@ -26,12 +26,16 @@ public class UserService {
 		 }		
 	}
 
-	public Optional<Users> getById(Integer id) {
+	public Optional<User> getById(Integer id) {
 		return userRepository.findById(id);
 
 	}
 
-	public List<Users> getAllUsers() {
+	public List<User> getAllUsers() {
 		return userRepository.findAll();
+	}
+
+	public User saveUser(User newUser) {
+		return userRepository.save(newUser);
 	}
 }
