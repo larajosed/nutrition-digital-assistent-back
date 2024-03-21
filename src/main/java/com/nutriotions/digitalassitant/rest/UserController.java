@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
-import com.nutriotions.digitalassitant.model.Location;
-import com.nutriotions.digitalassitant.model.Province;
 import com.nutriotions.digitalassitant.model.User;
 import com.nutriotions.digitalassitant.service.UserService;
 
@@ -46,13 +44,5 @@ public class UserController {
 		return userService.saveUser(newUser);
 	}
 	
-	@GetMapping("/provinces")
-	public List<Province> allProvinces() {		 
-		return userService.getAllProvinces();
-	}
-	
-	@GetMapping("/location/{idProvince}")
-	public List<Location> getAllLocation(@PathVariable ("idProvince") Integer idProvince){
-		return userService.getAllLocationById(idProvince);
-	}
+
 }
