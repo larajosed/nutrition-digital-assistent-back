@@ -24,19 +24,31 @@ public class User {
 	private String lastName;
 	
 	@Column
+	private Integer gender;
+	 
+	@Column 
+	private LocalDate birthdate;
+	
+	@Column
+	private String address;
+	
+	@Column(name = "postal_code")
+	private Integer postalCode;
+	
+	@Column
+	private String location;
+	
+	@Column
+	private String province;
+	
+	@Column
 	private String email;
 	
 	@Column
 	private String password;
 	
-	@Column
-	private Integer gender;
-	 
-	@Column
-	private String address;
 	
-	@Column 
-	private LocalDate date;
+	
 	 
 	@ManyToOne
 	@JoinColumn(name = "role")
@@ -98,14 +110,6 @@ public class User {
 		this.address = adress;
 	}
 	
-	public LocalDate getDate() {
-		return this.date;
-	}
-	
-	public void setDate(LocalDate date) {
-		this.date = date;
-	}
-	
 	public Role getRole() {
 		return role;
 	}
@@ -117,6 +121,39 @@ public class User {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
+	public LocalDate getBirthdate() {
+		return birthdate;
+	}
+
+	public void setBirthdate(LocalDate birthdate) {
+		this.birthdate = birthdate;
+	}
+
+	public Integer getPostalCode() {
+		return postalCode;
+	}
+
+	public void setPostalCode(Integer postalCode) {
+		this.postalCode = postalCode;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public String getProvince() {
+		return province;
+	}
+
+	public void setProvince(String province) {
+		this.province = province;
+	}
+	
 	
 
 
