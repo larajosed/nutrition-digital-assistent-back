@@ -1,10 +1,10 @@
-package com.nutriotions.digitalassitant.repository;
+package com.nutritions.digitalassistant.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.nutriotions.digitalassitant.model.Province;
+import com.nutritions.digitalassistant.model.Province;
 
 public interface ProvinceRepository extends JpaRepository<Province, Integer> {
 

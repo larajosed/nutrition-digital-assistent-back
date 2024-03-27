@@ -1,4 +1,4 @@
-package com.nutriotions.digitalassitant.model;
+package com.nutritions.digitalassistant.model;
 
 import java.time.LocalDate;
 import jakarta.persistence.Column;
@@ -35,21 +35,20 @@ public class User {
 	@Column(name = "postal_code")
 	private Integer postalCode;
 	
-	@Column
-	private String location;
+	@ManyToOne()
+	@JoinColumn(name = "id_province")
+	private Province province;
 	
-	@Column
-	private String province;
+	@ManyToOne()
+	@JoinColumn(name = "id_location")
+	private Location location;
 	
 	@Column
 	private String email;
 	
 	@Column
 	private String password;
-	
-	
-	
-	 
+		 
 	@ManyToOne
 	@JoinColumn(name = "role")
 	private Role role;
@@ -138,19 +137,19 @@ public class User {
 		this.postalCode = postalCode;
 	}
 
-	public String getLocation() {
+	public Location getLocation() {
 		return location;
 	}
 
-	public void setLocation(String location) {
+	public void setLocation(Location location) {
 		this.location = location;
 	}
 
-	public String getProvince() {
+	public Province getProvince() {
 		return province;
 	}
 
-	public void setProvince(String province) {
+	public void setProvince(Province province) {
 		this.province = province;
 	}
 	
