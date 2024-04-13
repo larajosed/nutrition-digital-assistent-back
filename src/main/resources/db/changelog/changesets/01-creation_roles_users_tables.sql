@@ -17,7 +17,7 @@ PRIMARY KEY (id),
 FOREIGN KEY(id_province) REFERENCES province(id));
 
 CREATE TABLE users (
-  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  id INT NOT NULL AUTO_INCREMENT,
   name VARCHAR(100) NOT NULL,
   last_name VARCHAR(100) NOT NULL,
   gender INT NULL COMMENT '1 = Men\n2 = Woman\n3 = No binary',

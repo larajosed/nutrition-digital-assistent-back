@@ -7,12 +7,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.nutritions.digitalassistant.model.Location;
-import com.nutritions.digitalassistant.model.Province;
 import com.nutritions.digitalassistant.model.User;
-import com.nutritions.digitalassistant.repository.LocationRepository;
-import com.nutritions.digitalassistant.repository.ProvinceRepository;
 import com.nutritions.digitalassistant.repository.UserRepository;
 
 
