@@ -18,10 +18,10 @@ public class MedicalData {
 	private Integer idUser;
 	
 	@Column 
-	private String weight;
+	private Float weight;
 	
 	@Column
-	private String height;
+	private Float height;
 	
 	@Column
 	private String currentMedical;
@@ -55,19 +55,19 @@ public class MedicalData {
 		this.idUser = idUser;
 	}
 
-	public String getWeight() {
+	public Float getWeight() {
 		return weight;
 	}
 
-	public void setWeight(String weight) {
+	public void setWeight(Float weight) {
 		this.weight = weight;
 	}
 
-	public String getHeight() {
+	public Float getHeight() {
 		return height;
 	}
 
-	public void setHeight(String height) {
+	public void setHeight(Float height) {
 		this.height = height;
 	}
 

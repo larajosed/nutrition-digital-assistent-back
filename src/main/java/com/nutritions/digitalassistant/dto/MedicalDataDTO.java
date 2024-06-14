@@ -2,17 +2,17 @@ package com.nutritions.digitalassistant.dto;
 
 import java.io.Serializable;
 
-public class MedicalDataDTO implements Serializable {
+public class MedicalDataDto implements Serializable {
 	
 	private Integer id;	
 	
 	private Integer idUser;
 	
 	
-	private String weight;
+	private Float weight;
 	
 	
-	private String height;
+	private Float height;
 	
 	
 	private String currentMedical;
@@ -50,22 +50,22 @@ public class MedicalDataDTO implements Serializable {
 	}
 
 
-	public String getWeight() {
+	public Float getWeight() {
 		return weight;
 	}
 
 
-	public void setWeight(String weight) {
+	public void setWeight(Float weight) {
 		this.weight = weight;
 	}
 
 
-	public String getHeight() {
+	public Float getHeight() {
 		return height;
 	}
 
 
-	public void setHeight(String height) {
+	public void setHeight(Float height) {
 		this.height = height;
 	}
 
