@@ -1,6 +1,6 @@
 package com.nutritions.digitalassistant.model;
 
-import java.time.LocalDate;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -73,5 +73,6 @@ public class Diet {
 
 	public void setPlanning(List<Planning> planning) {
 		this.planning = planning;
-	}	
+	}
+	
 }

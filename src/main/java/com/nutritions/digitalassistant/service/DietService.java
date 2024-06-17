@@ -146,6 +146,7 @@ public class DietService {
 				dayAndMealDto.getMeals().add(mealsAndRecipeDto);
 			}
 		}
+		daysAndMeals.sort(Comparator.comparing(DayAndMealsDto::getOrder));
 		return daysAndMeals;
 	}
 	
