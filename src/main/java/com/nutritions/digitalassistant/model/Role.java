@@ -1,18 +1,23 @@
-package com.nutriotions.digitalassitant.model;
+package com.nutritions.digitalassistant.model;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-public class roles {
+@Entity
+@Table (name = "roles")
+public class Role {
 
 	@Id
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
 	@Column
-	private String nombre;
+	private String name;
 
 	public Integer getId() {
 		return id;
@@ -22,13 +27,14 @@ public class roles {
 		this.id = id;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getName() {
+		return name;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setName(String name) {
+		this.name = name;
 	}
+
 	
 	
 }
