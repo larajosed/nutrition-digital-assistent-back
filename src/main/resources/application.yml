@@ -9,4 +9,4 @@ spring:
     password: 3151485
     driver-class-name: com.mysql.cj.jdbc.Driver
   liquibase:
-    contexts: test 
+    contexts: test,qa,main

@@ -1,4 +1,4 @@
-package com.nutriotions.digitalassitant;
+package com.nutritions.digitalassistant;
 
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
