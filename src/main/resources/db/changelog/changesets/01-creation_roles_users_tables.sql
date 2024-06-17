@@ -38,10 +38,10 @@ CREATE TABLE roles (
   name VARCHAR(45) NOT NULL,
   PRIMARY KEY (id));
   
-INSERT INTO users (name, last_name, gender,birthdate, email, password, role) VALUES ('Pepe', 'Lopez', 1, '1996/11/05','pepelopez@gmail.com', '12345', 1);
-INSERT INTO users (name, last_name, gender, birthdate, email, password, role) VALUES ('Maria', 'Lopez', 1, '1990/10/08', 'maria@gmail.com',  '12345', 2);
-INSERT INTO users (name, last_name, gender, birthdate, email, password, role) VALUES ('Luis', 'Lara', 1, '1980/10/08', 'luis@gmail.com',  '12345', 1);
-INSERT INTO users (name, last_name, gender, birthdate, email, password, role) VALUES ('Juana', 'Perez', 1, '1999/10/04', 'juana@gmail.com',  '12345', 1);
+INSERT INTO users (name, last_name, gender,birthdate, email, password, role) VALUES ('Pepe', 'Lopez', 1, '1996-11-05','pepelopez@gmail.com', '12345', 1);
+INSERT INTO users (name, last_name, gender, birthdate, email, password, role) VALUES ('Maria', 'Lopez', 1, '1990-10-08', 'maria@gmail.com',  '12345', 2);
+INSERT INTO users (name, last_name, gender, birthdate, email, password, role) VALUES ('Luis', 'Lara', 1, '1980-10-08', 'luis@gmail.com',  '12345', 1);
+INSERT INTO users (name, last_name, gender, birthdate, email, password, role) VALUES ('Juana', 'Perez', 1, '1999-10-04', 'juana@gmail.com',  '12345', 1);
 INSERT INTO roles (id, name) VALUES (1, 'Usuario');
 INSERT INTO roles (id, name) VALUES (2, 'Administrador');
 
